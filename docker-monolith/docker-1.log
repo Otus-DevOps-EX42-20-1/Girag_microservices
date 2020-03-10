@@ -1,0 +1,5 @@
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              16.04               77be327e4b63        2 weeks ago         124MB
+hello-world         latest              fce289e99eb9        14 months ago       1.84kB
+
+Образ представляет собой фактически шаблон, из которого создаётся контейнер путём добавления к слоям только для чтения слой с возможностью записи.
