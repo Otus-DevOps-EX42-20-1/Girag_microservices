@@ -32,3 +32,18 @@ Girag microservices repository
 - Создана группа и проект в `Gitlab`, определён CI/CD pipeline в файле `.gitlab-ci.yml`.
 - Запущен и зарегистрирован runner.
 - В pipeline добавлен тест приложения и определены окружения `dev`, `stage` и `production`. Также была добавлена поддержка динамических окружений для каждой ветки в репозитории.
+
+# ДЗ №16: "Введение в мониторинг. Модели и принципы работы систем мониторинга"
+
+- Развёрнута система мониторинга `Prometheus` внутри Docker-контейнера.
+- Определён простой конфигурационный файл `prometheus.yml` для сбора метрик с наших микросервисов.
+- Собраны Docker-образы наших микросервисов при помощи скриптов `docker_build.sh`, а также собран образ самого `Prometheus`.
+- Написан `docker-compose.yml` для совместного поднятия всех контейнеров с сервисами, где также прописана секция `networks` для их сетевого взаимодействия.
+- Сконфигурирован мониторинг состояния наших микросервисов при помощи нужных endpoint'ов.
+- Собранные ранее образы запушены на `Docker Hub` в публичные репозитории:
+```
+https://hub.docker.com/repository/docker/girag/ui
+https://hub.docker.com/repository/docker/girag/comment
+https://hub.docker.com/repository/docker/girag/post
+https://hub.docker.com/repository/docker/girag/prometheus
+```
