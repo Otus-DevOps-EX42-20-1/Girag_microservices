@@ -47,3 +47,19 @@ https://hub.docker.com/repository/docker/girag/comment
 https://hub.docker.com/repository/docker/girag/post
 https://hub.docker.com/repository/docker/girag/prometheus
 ```
+
+# ДЗ №17: "Мониторинг приложения и инфраструктуры"
+
+- Файл `docker-compose.yml` разделён на два: в `docker-compose.yml` оставлено описание приложений, а мониторинг выделен в отдельный файл `docker-compose-monitoring.yml`.
+- Для наблюдения за состоянием Docker-контейнеров использован `cAdvisor`.
+- В файле `prometheus.yml` собрана информация о всех сервисах, с которых собираются метрики.
+- Использован инструмент `Grafana` для визуализации данных из `Prometheus`. Создано несколько дашбордов с графиками собираемых метрик приложения.
+- Настроен алертинг при помощи `Alertmanager` – дополнительного компонента для системы мониторинга Prometheus, который отвечает за первичную обработку алертов и дальнейшую отправку оповещений по заданному назначению.
+- Собранные Docker-образы запушены в публичный репозиторий на Docker Hub:
+```
+https://hub.docker.com/repository/docker/girag/ui
+https://hub.docker.com/repository/docker/girag/comment
+https://hub.docker.com/repository/docker/girag/post
+https://hub.docker.com/repository/docker/girag/prometheus
+https://hub.docker.com/repository/docker/girag/alertmanager
+```
